@@ -36,12 +36,12 @@ Grandes Telas: Acima De 1200px
         width: 950px;
     }
     div#imagem {
-        float: left;
+        float: right;
         width: 40%;
         height: 100%;
     }
     div#formulario {
-        float: right;
+        float: left;
         width: 60%;
     }
 }
