@@ -34,15 +34,18 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 520px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.572);
 
+    /* 
+    SEMPRE QUE TIVER UMA TRANSFORMAÇÃO/TRANSIÇAO PARA FAZER, COLOQUE PARA SER FEITO NO FINAL. 
+    */
+    transform: translate(-50%, -50%);    
     transition: width 0.4s, height 0.4s;
     transition-timing-function: ease;
 }
@@ -67,5 +70,82 @@ div#formulario h1 {
 }
 
 div#formulario p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
+
+form > div.campo {
+    background-color: var(--lilas);
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+form label {
+    display: none;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo input {
+    background-color: aquamarine;
+    font-size: 1em;
+    width: calc(100% - 48px);
+    height: 73%;
+    border: none;
+    border-radius: 8px;
+    /* SEMPRE QUE TIVER UMA TRANSFORMAÇÃO/TRANSIÇAO PARA FAZER, COLOQUE PARA SER FEITO NO FINAL. */
+    transform: translateY(-10px);
+}
+
+div.campo input:focus-within {
+    background-color: white;
+    outline: none;
+}
+
+input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #286e6c;
+    cursor: pointer;
+}
+
+form a.button {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #f4ffff;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+    color: darkcyan;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+form a.button:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+form > a.button > span {
+    font-size: 0.8em;
+}
+
